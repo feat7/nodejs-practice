@@ -13,7 +13,7 @@ app.get('/', function(req, res) {
   res.render('home');
 });
 
-/* Run server on port 3000 */
-app.listen(3000, function(err) {
-  console.log('Server Started at localhost:3000');
+/* Run server on port 3001 */
+app.listen(3001, function(err) {
+  console.log('Server Started at localhost:3001');
 });
