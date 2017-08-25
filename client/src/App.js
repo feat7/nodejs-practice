@@ -1,17 +1,21 @@
 import React, { Component } from 'react';
+import injectTapEventPlugin from 'react-tap-event-plugin';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import RaisedButton from 'material-ui/RaisedButton';
-import {Link} from 'react-router-dom';
+import AppBar from 'material-ui/AppBar';
+import IconButton from 'material-ui/IconButton';
+import MenuIcon from 'material-ui/Menu';
+
+injectTapEventPlugin();
 
 class App extends Component {
   render() {
     return (
       <MuiThemeProvider>
-        <div className="App">
-          Hello React!
-          <RaisedButton label={'Hello Page!'} primary={true}
-            containerElement={ <Link to="/hello" /> } />
-        </div>
+          <AppBar>
+              <IconButton>
+                <MenuIcon/>
+              </IconButton>
+          </AppBar>
       </MuiThemeProvider>
     );
   }
